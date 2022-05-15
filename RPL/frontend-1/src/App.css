@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.chair{
+    height: 720px;
+}
+
+.file {
+    background: none;
+}

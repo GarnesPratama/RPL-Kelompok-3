@@ -1,0 +1,7 @@
+<form action="/category/edit<%= category._id %>?_method=PUT"  method="POST" >
+  <div class="form-group">
+    <label for="exampleInputPassword1">Masukkan Nama</label>
+    <input type="text" class="form-control" id="name" name="name" value="<%= category.name %> ">
+  </div>
+  <button type="submit" class="btn btn-primary">Edit Data</button>
+</form>

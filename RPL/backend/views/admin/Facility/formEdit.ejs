@@ -1,0 +1,7 @@
+<form action="/facility/edit<%= facility._id %>?_method=PUT"  method="POST" >
+  <div class="form-group">
+    <label for="exampleInputPassword1">Masukkan Ttile</label>
+    <input type="text" class="form-control" id="name" name="title" value="<%= facility.name %> ">
+  </div>
+  <button type="submit" class="btn btn-primary">Edit Data</button>
+</form>

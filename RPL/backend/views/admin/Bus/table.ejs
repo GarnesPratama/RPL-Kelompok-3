@@ -1,0 +1,73 @@
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Data Bus </h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Kode</th>
+                                            <th>Nama Bus</th>
+                                            <th>Kelas Bus</th>
+                                            <th>No Kursi</th>
+                                            <th>tujuan</th>
+                                            <th>Agen</th>
+                                            <th>Tgl Berangkat</th>
+                                            <th>Tgl Sampai</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for(let i=0; i<bus.length; i++) { %>
+                                        <tr>
+                                            <th>
+                                                <%= i+1 %>
+                                            </th>
+                                            <th>
+                                                <%= bus[i].code %>
+                                            </th>
+                                            <th>
+                                                <%= bus[i].namaBus %>
+                                            </th>
+                                            <th>
+                                                <%= bus[i].classBus %>
+                                            </th>
+                                            <th>
+                                                <%= bus[i].noKursi %>
+                                            </th>
+                                            <th>
+                                                <%= bus[i].tujuan %>
+                                            </th>
+                                            <th>
+                                                <%= bus[i].Agen %>
+                                            </th>
+                                            <th>
+                                                <%= bus[i].dateStart.toLocaleString() %>
+                                            </th>
+                                            <th>
+                                                <%= bus[i].dateEnd.toLocaleString() %>
+                                            </th>
+                                            <th>
+                                                <form action="/bus/delete<%= bus[i]._id %>?_method=DELETE "
+                                                    method="POST">
+                                                    <a href="/bus/edit<%= bus[i].id %> ">
+                                                        <i class="bi bi-pencil btn btn-success"></i>
+                                                    </a>
+                                                    <button type="submit" class="btn btn-danger">
+                                                        <i class="bi bi-trash"></i>
+                                                    </button>
+
+                                                </form>
+
+                                            </th>
+
+                                        </tr>
+                                        <% } %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>

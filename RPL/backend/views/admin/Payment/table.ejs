@@ -1,0 +1,53 @@
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Data Ticket </h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Asal Bank</th>
+                                            <th>Nomor Rekening</th>
+                                            <th>Nama Pengirim</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for(let i=0; i<payment.length; i++) { %>
+                                        <tr>
+                                            <th>
+                                                <%= i+1 %>
+                                            </th>
+                                            <th>
+                                                <%= payment[i].asalBank %>
+                                            </th>
+                                            <th>
+                                                <%= payment[i].noRek %>
+                                            </th>
+                                            <th>
+                                                <%= payment[i].namaPengirim %>
+                                            </th>
+                                            <th>
+                                                <form action="/payment/delete<%= payment[i]._id %>?_method=DELETE"
+                                                    method="POST">
+                                                    <a href="/payment/edit<%= payment[i].id %> ">
+                                                        <i class="bi bi-pencil btn btn-success"></i>
+                                                    </a>
+                                                    <button type="submit" class="btn btn-danger">
+                                                        <i class="bi bi-trash "></i>
+                                                    </button>
+
+                                                </form>
+
+                                            </th>
+                                            
+                                        </tr>
+                                        <% } %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
