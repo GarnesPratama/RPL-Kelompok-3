@@ -32,7 +32,7 @@ export default function book() {
         </label>
         <label class="block mt-36">
           <span class=" font-sans font-semibold text-blackText text-base">
-            Total Pembayaran
+            Total Pembayaran Tiket
           </span>
 
           <input
