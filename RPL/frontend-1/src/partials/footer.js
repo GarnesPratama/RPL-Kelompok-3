@@ -27,7 +27,7 @@ export default function footer() {
               <div className="isi font-sans font-light text-base mt-6 text-grayText">
                 <p>Our Careers</p>
                 <p className=" mt-2">Privacy</p>
-                <p className=" mt-2 mb-12">Terms & Conditions</p>
+                <p className=" mt-2 mb-12">Terms and Conditions</p>
               </div>
             </div>
           </div>
