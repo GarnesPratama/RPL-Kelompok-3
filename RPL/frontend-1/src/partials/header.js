@@ -15,7 +15,7 @@ export default function header() {
               <li className=" hover:text-black">Home</li>
               <li className=" hover:text-black">Detail</li>
               <li className="hover:text-black">Review</li>
-              <li className=" hover:text-black">Tiket Saya</li>
+              <li className=" hover:text-black">My Ticket</li>
               <li>
                 <img src={login} className="w-7 h-7" alt="" srcset="" />
               </li>
